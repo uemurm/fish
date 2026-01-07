@@ -30,3 +30,9 @@ if test -e "$ABBREVIATIONS"
     source $ABBREVIATIONS
 end
 
+# fish shell automatically adds `~/.local/bin` to PATH but it doesn't work on login shell..
+# fish/conf.d/ files are run on login shell but still it's not added, though...
+if not contains "$HOME/.local/bin" $PATH
+    set --export PATH $HOME/.local/bin $PATH
+end
+
