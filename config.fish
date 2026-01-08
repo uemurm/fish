@@ -3,6 +3,9 @@ set --global theme_display_date yes
 set --global theme_date_format "+%F %H:%M"
 set --global theme_display_git_default_branch yes
 
+# Enable native symbolic links on MSYS2
+set --export MSYS	winsymlinks:nativestrict
+
 set --export LESS       '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
 switch (uname --kernel-name)
 case Linux
