@@ -35,7 +35,11 @@ end
 
 # fish shell automatically adds `~/.local/bin` to PATH but it doesn't work on login shell..
 # fish/conf.d/ files are run on login shell but still it's not added, though...
+# fish_add_path command (>v3.2.0) won't work on MSYS2..
 if not contains "$HOME/.local/bin" $PATH
     set --export PATH $HOME/.local/bin $PATH
+end
+if not contains "/c/Program Files/Docker/Docker/resources/bin" $PATH
+    set --export PATH "/c/Program Files/Docker/Docker/resources/bin" $PATH
 end
 
