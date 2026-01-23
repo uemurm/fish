@@ -36,13 +36,27 @@ abbr --add -- gshow 'git show'
 #
 # Docker related
 #
-abbr --add -- dps       'docker ps --all'
-abbr --add -- dimages   'docker images --all'
-abbr --add -- dhistory  'docker history'
-abbr --add -- dexec     'docker exec'
-abbr --add -- dlogs     'docker logs'
-abbr --add -- drm       'docker rm'
-abbr --add -- drmi      'docker rmi'
+
+# Image-related
+abbr --add -- dimages   'docker images --all'	# List all local images
+abbr --add -- drmi      'docker rmi'		# Remove an image
+abbr --add -- dpl       'docker pull'		# Download an image from Docker Hub
+abbr --add -- dbld      'docker build --tag .'	# Build an image from Dockerfile
+
+# Running container-related
+abbr --add -- dps       'docker ps --all'	# List containers
 abbr --add -- dstop     'docker stop'
-abbr --add -- dpull     'docker pull'
+abbr --add -- dstart    'docker start'		# Resume a stopped container
+abbr --add -- drm       'docker rm'		# Remove a stopped container
+abbr --add -- dlogs     'docker logs'		# Check log of a container
+abbr --add -- dhist	'docker history'
+abbr --add -- dexec     'docker exec --interactive --tty bash'	# Run a command in a container
+
+# Docker compose-related
+abbr --add -- dcup  	'docker compose up'
+abbr --add -- dcdn  	'docker compose down'
+abbr --add -- dclogs  	'docker compose logs --follow'
+
+# Clean up
+abbr --add -- dsysprune 'docker system prune '	# Delete stopped containers, unused network, etc.
 
