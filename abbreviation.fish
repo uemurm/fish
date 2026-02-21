@@ -56,6 +56,7 @@ abbr --add -- dexec     'docker exec --interactive --tty bash'	# Run a command i
 abbr --add -- dcup  	'docker compose up'
 abbr --add -- dcdn  	'docker compose down'
 abbr --add -- dclogs  	'docker compose logs --follow'
+abbr --add -- dcrun  	'docker compose run --rm'
 
 # Clean up
 abbr --add -- dsysprune 'docker system prune '	# Delete stopped containers, unused network, etc.
