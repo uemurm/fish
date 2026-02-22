@@ -12,7 +12,6 @@ abbr --add -- cp    'cp -i'
 abbr --add -- mv    'mv -i'
 abbr --add -- rm    'rm -i'
 abbr --add -- p     'pushd'
-abbr --add -- d	    'dirs'
 
 abbr --add -- vi    'vim'
 
