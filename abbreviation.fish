@@ -60,3 +60,7 @@ abbr --add -- dcrun  	'docker compose run --rm'
 # Clean up
 abbr --add -- dsysprune 'docker system prune '	# Delete stopped containers, unused network, etc.
 
+# abbreviations for long commands
+abbr --add -- di   'docker image'
+abbr --add -- dc   'docker container'
+abbr --add -- dcmp 'docker compose'
