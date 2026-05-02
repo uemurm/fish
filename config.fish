@@ -43,3 +43,13 @@ if not contains "/c/Program Files/Docker/Docker/resources/bin" $PATH
     set --export PATH "/c/Program Files/Docker/Docker/resources/bin" $PATH
 end
 
+# On start-up: Restore directory stack from a universal variable.
+if set --query __saved_dirstack
+    set --global dirstack $__saved_dirstack
+end
+
+# On variable update: Save to the universal variable.
+function __persist_dirstack --on-variable dirstack
+    set --universal __saved_dirstack $dirstack
+end
+
