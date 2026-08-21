@@ -5,4 +5,6 @@ function fish_user_key_bindings
         bind \cG forward-word
         bind \cB backward-word
         bind \cW backward-kill-word
+        bind \cQ backward-kill-path-component
+	bind \t __tab_or_ls
 end
