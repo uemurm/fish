@@ -15,6 +15,8 @@ abbr --add -- p     'pushd'
 
 abbr --add -- vi    'vim'
 
+abbr --add -- grep  'grep --colour=always'
+
 #
 # Git related
 #
