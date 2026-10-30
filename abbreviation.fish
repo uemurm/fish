@@ -33,6 +33,11 @@ abbr --add -- gf    'git fetch'
 abbr --add -- grs   'git reset'
 abbr --add -- glog  'git log'
 abbr --add -- gshow 'git show'
+if test "$USERDOMAIN" = "BREVILLE"
+    abbr --add -- gcl   'git clone git@ssh.bitbucket.org:brevilledigital/'
+else
+    abbr --add -- gcl   'git clone'
+end
 
 #
 # Docker related
