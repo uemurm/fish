@@ -70,7 +70,7 @@ function fish_prompt
 #   end
 #   echo -n (prompt_hostname)
 
-    set --global fish_prompt_pwd_dir_length 4
+    set --global fish_prompt_pwd_dir_length 0
     set_color -o yellow
     echo -n (prompt_pwd)
     set_color -o green
