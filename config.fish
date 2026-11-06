@@ -43,6 +43,13 @@ if not contains "/c/Program Files/Docker/Docker/resources/bin" $PATH
     set --export PATH "/c/Program Files/Docker/Docker/resources/bin" $PATH
 end
 
+# Windows tools (lower priority than MSYS2 tools)
+if test "$USERDOMAIN" = "BREVILLE"
+    fish_add_path --path --append \
+        /c/Users/Mitsuhide.Uemura/AppData/Local/Microsoft/WindowsApps \
+        /c/Users/Mitsuhide.Uemura/AppData/Local/Microsoft/WinGet/Packages/astral-sh.uv_Microsoft.Winget.Source_8wekyb3d8bbwe
+end
+
 # On start-up: Restore directory stack from a universal variable.
 if set --query __saved_dirstack
     set --global dirstack $__saved_dirstack
