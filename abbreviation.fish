@@ -33,6 +33,7 @@ abbr --add -- gf    'git fetch'
 abbr --add -- grs   'git reset'
 abbr --add -- glog  'git log'
 abbr --add -- gshow 'git show'
+abbr --add -- gconf 'git config'
 if test "$USERDOMAIN" = "BREVILLE"
     abbr --add -- gcl   'git clone git@ssh.bitbucket.org:brevilledigital/'
 else
